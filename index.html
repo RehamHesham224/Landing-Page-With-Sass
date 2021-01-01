@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <!-- style link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body data-spy="scroll" data-target="#main-nav" id="home">
+        <!-- start spinner -->
+        <div class="spinner">
+            <div class="spinner__scaling-squares" :style="spinnerStyle">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+        </div>
+        
+        <!-- end spinner -->
+
+        <!-- start top nav -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="row d-flex justify-content-between flex-wrap">
+                <div class="top-nav__box py-3">
+                    <a href="tel:+2039357834 ">
+                    <i class="fa fa-phone "></i>
+                    <span class="text-muted"> 020 3935 7834 </span>
+                    </a>
+                    
+                </div>
+                <div class="top-nav__box top-nav__box--center px-3 py-3">
+                    <span class="text-muted">Welcome to unkown company </span>
+                </div>
+                <div class="top-nav__box py-3">
+                    <a href="mailto:someone@gmail.com "></a>
+
+                    <a href="#"><i class="far fa-comment-alt"></i>
+                        <span class="text-muted mr-3">live chat </span></a>
+                    
+                    <span class="text-muted">Support </span>
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- start middle  nav -->
+    <div class="middle-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col  ">
+                    <img src="./img/logo.svg" class="middle-nav__img"  alt="">
+                </div>
+                <div class="col  d-flex justify-content-end align-items-center">
+                    <a href="#" class="btn btn-lg p-4">Log in Now</a>
+                    <span class="middle-nav-span ml-3">
+                        (0) <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end  middle  nav -->
+
+    <!--start navbar -->
+    <div class="navbar 
+    navbar-expand-lg
+    text-white
+    bg--prim 
+
+    " id="main-nav">
+    <div class="container">
+        <button class="navbar-toggler " data-toggle="collapse" data-target="#navbarCollapse">
+            <i class="fa fa-list fa-2x text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+                <li class="nav-item mr-2 p-3">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item mr-2 p-3">
+                    <a href="#about" class="nav-link">Company Formation</a>
+                </li>
+                <li class="nav-item mr-2 p-3">
+                    <a href="#services" class="nav-link">Addition Services</a>
+                </li>
+                <li class="nav-item p-3">
+                    <a href="#why-choose" class="nav-link">Why Choose Us</a>
+                </li>
+                <li class="nav-item mr-2 p-3">
+                    <a href="#help" class="nav-link">Help and Support</a>
+                </li>
+                <li class="nav-item mr-2 p-3">
+                    <a href="#question" class="nav-link">question</a>
+                </li>
+                <li class="nav-item p-3">
+                    <a href="#contact" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+
+            
+
+        </div>
+    </div>
+    </div>
+
+    <!-- end nav -->
+    <!-- start header -->
+    <header class="header text-white">
+    <div class="container">
+        <div class="row  ">
+            <div class="col">
+                <div class="header__content d-flex justify-content-center align-items-center  flex-column ">
+                    <h2 class=" ">UK Limited</h2>
+                    <h1 class="font-weight-bold mt-0 header__heading">Company Format</h1>
+                    <h2 class=" ">& Registration Agent</h2>
+                    <form action="" class="header__form">
+                        <div class="input-group mb-3 header__input-group input-group-lg py-3">
+                       
+                            <select name="select-box" id="select-box" class="form-control  bg-light px-2 " placeholder="Recipient's username">
+                                <option value="web">web</option>
+                                <option value="web">security</option>
+                                <option value="web">githup</option>
+    
+                            </select>
+                            <div class="input-group-append outline-none ">
+                            <span class="input-group-text p-4" id="basic-addon2"><i class="fa fa-search text-white"></i></span>
+                            </div>
+                        </div>
+                    </form>
+                   
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="header__icons d-flex flex-column">
+        <ul class="list-unstyled">
+            <a href="#"><li><i class="fas fa-envelope-open-text"></i></li></a>
+           <a href="#"> <li><i class="fab fa-skype"></i></li></a>
+            <a href="#"><li><i class="fa fa-phone"></i></li></a>
+            
+        </ul>
+    </div>
+    </header>
+    <!-- end header -->
+    <!-- about section -->
+    <section id="about" class="about">
+        
+        <div class="container">
+            <div class="row">
+                <div class="about__heading text-white  w-100">
+                    <h1 class="mb-0">Popular Services & Renewal</h1>
+                </div>
+            </div>
+            
+            <div class="row py-3 about__boxes">
+            <div class="col-sm-4 about__box  d-flex align-items-center ">
+                    <div class="about__box__icon d-flex align-items-center justify-content-center">
+                        <!-- <i class="fa fa-calendar fa-3x"></i> -->
+                        <img src="./img/about-icons/calendar.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="about__box__text"> 
+                        <h2>Confirmation <br> Statement</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">Read More</a>
+                    
+
+                </div>
+            </div>
+            <div class="col-sm-4 about__box  d-flex align-items-center ">
+                    <div class="about__box__icon d-flex align-items-center justify-content-center">
+                        <!-- <i class="fa fa-calendar fa-3x"></i> -->
+                        <img src="./img/about-icons/buildings.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="about__box__text"> 
+                        <h2>Confirmation <br> Statement</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">Read More</a>
+                    
+
+                </div>
+            </div>
+            <div class="col-sm-4 about__box  d-flex align-items-center ">
+                    <div class="about__box__icon d-flex align-items-center justify-content-center">
+                        <!-- <i class="fa fa-calendar fa-3x"></i> -->
+                        <img src="./img/about-icons/restore3.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="about__box__text"> 
+                        <h2>Confirmation <br> Statement</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">Read More</a>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- services section -->
+    <section class="services py-5" id="services">
+        <div class="container">
+            <h1 class="main-heading mb-0">We Are Announcing Perfect Package For You</h1>
+            <p class="services__main-text">Below Package List</p>
+            <div class="row d-flex flex-wrap">
+                <div class="col-services ">
+                    <div class="card services__card">
+                        <div class="card-body">
+                <h2>Basic1</h2>
+                <div class="card-head">
+                    <div class="h1 font-weight-bold">
+                        &euro; 15.00
+                    </div>
+                    <span class="text-uppercase d-block">Excloding Vat</span>
+                    <a  href="#" class="btn">Buy</a>
+                </div>
+                        
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>Free Lifetime Company Support</li>
+                        <li>Online Admin Portal To Manage</li>
+                        <li>No Complicated Papernetwork To complete</li>
+                    </ul>
+                <ul class="list-unstyled">
+                    <li>3-hour Online Formation*</li>
+                    <li>Printed Certification of Incoporation</li>
+                    <li>Printed Share Certification</li>
+                    <li>Nat Tax & accountancy consultation</li>
+                    <li>Not Vat registration with HMRC</li>
+                </ul>
+                </div>
+            </div>
+            <div class="col-services ">
+                <div class="card services__card">
+                    <div class="card-body">
+            <h2>Basic2</h2>
+            <div class="card-head">
+                <div class="h1 font-weight-bold">
+                    &euro; 15.00
+                </div>
+                <span class="text-uppercase d-block">Excloding Vat</span>
+                <a href="#" class="btn">Buy</a>
+            </div>
+                    
+                </div>
+                <ul class="list-unstyled">
+                    <li>Free Lifetime Company Support</li>
+                    <li>Online Admin Portal To Manage</li>
+                    <li>No Complicated Papernetwork To complete</li>
+                </ul>
+            <ul class="list-unstyled">
+                <li>3-hour Online Formation*</li>
+                <li>Printed Certification of Incoporation</li>
+                <li>Printed Share Certification</li>
+                <li>Nat Tax & accountancy consultation</li>
+                <li>Not Vat registration with HMRC</li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-services ">
+            <div class="card services__card">
+                <div class="card-body">
+        <h2>Basic3</h2>
+        <div class="card-head">
+            <div class="h1 font-weight-bold">
+                &euro; 15.00
+            </div>
+            <span class="text-uppercase d-block">Excloding Vat</span>
+            <a href="#" class="btn">Buy</a>
+        </div>
+                
+            </div>
+            <ul class="list-unstyled">
+                <li>Free Lifetime Company Support</li>
+                <li>Online Admin Portal To Manage</li>
+                <li>No Complicated Papernetwork To complete</li>
+            </ul>
+        <ul class="list-unstyled">
+            <li>3-hour Online Formation*</li>
+            <li>Printed Certification of Incoporation</li>
+            <li>Printed Share Certification</li>
+            <li>Nat Tax & accountancy consultation</li>
+            <li>Not Vat registration with HMRC</li>
+        </ul>
+        </div>
+        <span class=" best-seller">Best Seller</span>
+    </div>
+    <div class="col-services ">
+        <div class="card services__card">
+            <div class="card-body">
+    <h2>Basic4</h2>
+    <div class="card-head">
+        <div class="h1 font-weight-bold">
+            &euro; 15.00
+        </div>
+        <span class="text-uppercase d-block">Excloding Vat</span>
+        <a href="#" class="btn">Buy</a>
+    </div>
+            
+        </div>
+        <ul class="list-unstyled">
+            <li>Free Lifetime Company Support</li>
+            <li>Online Admin Portal To Manage</li>
+            <li>No Complicated Papernetwork To complete</li>
+        </ul>
+    <ul class="list-unstyled">
+        <li>3-hour Online Formation*</li>
+        <li>Printed Certification of Incoporation</li>
+        <li>Printed Share Certification</li>
+        <li>Nat Tax & accountancy consultation</li>
+        <li>Not Vat registration with HMRC</li>
+    </ul>
+    </div>
+    </div>
+    <div class="col-services ">
+        <div class="card services__card">
+            <div class="card-body">
+    <h2>Basic5</h2>
+    <div class="card-head">
+        <div class="h1 font-weight-bold">
+            &euro; 15.00
+        </div>
+        <span class="text-uppercase d-block">Excloding Vat</span>
+        <a href="#" class="btn">Buy</a>
+    </div>
+            
+        </div>
+        <ul class="list-unstyled">
+            <li>Free Lifetime Company Support</li>
+            <li>Online Admin Portal To Manage</li>
+            <li>No Complicated Papernetwork To complete</li>
+        </ul>
+    <ul class="list-unstyled">
+        <li>3-hour Online Formation*</li>
+        <li>Printed Certification of Incoporation</li>
+        <li>Printed Share Certification</li>
+        <li>Nat Tax & accountancy consultation</li>
+        <li>Not Vat registration with HMRC</li>
+    </ul>
+    </div>
+    </div>
+            </div>
+        
+        </div>
+        
+    </section>
+    <section class="why-choose" id="why-choose">
+    <div class="container">
+        <h1 class="main-heading mb-5 text-center">Why Choose Us</h1>
+
+        <div class="row">
+            <div class=" p-0 m-0 col-md-4 d-flex align-items-center justify-content-center text-center flex-column ">
+                <ul class="list-unstyled why-choose__list ">
+                    <li  class="why-choose__bg--prim why-choose__first-tap">Fast Services</li>
+                    <li class="why-choose__second-tap">Great Value</li>
+                    <li class="why-choose__third-tap">You're in safe hands</li>
+                </ul>
+            </div>
+            <div class="col-md-4 why-choose__center">
+    
+        </div>
+        <div class="col-md-4 p-3 d-flex justify-content-center flex-column why-choose__last">
+            <h1>3 hour Format</h1>
+    <p class="text-muted mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur nihil explicabo, laborum magnam quaerat mollitia harum illum . </p>
+    <h1>4 simple step</h1>
+    <p class="text-muted mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur nihil explicabo, laborum magnam quaerat mollitia harum illum . </p>
+                </div>
+
+
+    </div>
+    </section>
+    <section class="help" id="help">
+        <h1 class="main-heading mb-4 text-center">Latest News / Blogs</h1>
+        <div class="help__content">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-lg-4">
+        <img src="./img/blog/blog_1.jpg" alt="" class="img-fluid help__img">
+        <div class="help__box mx-5 ">
+            <div class="d-flex help__box__header">
+                <div class="d-flex help__box__header--l">
+                    <img src="./img/blog/blog-4.jpg" alt="" class="rounded-circle img-fluid mr-3">
+                    <h3>Blog Writer name</h3>
+                </div>
+                <div class=" help__box__header--r  ml-auto text-center  ">
+        <a href="#"><i class="fa fa-share-alt-square text-secondary d-block"></i></a>
+        
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <span class="dot "></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        </a>
+        <div class="dropdown-menu ">
+            <a href="#" class="dropdown-item">Share with others</a>
+            <a href="#" class="dropdown-item">share on social account</a>
+            <a href="#" class="dropdown-item">save as</a>
+        </div>
+        
+        
+                </div>
+            </div>
+            <div class="help__box__body p-4">
+                <h2 class="text-uppercase">business bank account <br> cashcack service</h2>
+                <p class="text-muted">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ad et dolor ipsa unde omnis repellendus cupiditate maiores ut quod, quia totam cumque doloribus fuga labore sint ratione placeat porro.
+                </p>
+            </div>
+            
+        
+        
+        </div>
+                    </div>   
+                    <div class="col-lg-4">
+        <img src="./img/blog//blog-2.jpg" alt="" class="img-fluid help__img">
+        <div class="help__box mx-5 ">
+            <div class="d-flex help__box__header">
+                <div class="d-flex help__box__header--l">
+                    <img src="./img/blog/blog-4.jpg" alt="" class="rounded-circle img-fluid mr-3">
+                    <h3>Blog Writer name</h3>
+                </div>
+                <div class=" help__box__header--r  ml-auto text-center  ">
+                    <a href="#"><i class="fa fa-share-alt-square text-secondary d-block"></i></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="dot "></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        </a>
+                        <div class="dropdown-menu ">
+                            <a href="#" class="dropdown-item">Share with others</a>
+                            <a href="#" class="dropdown-item">share on social account</a>
+                            <a href="#" class="dropdown-item">save as</a>
+                        </div>
+        
+                </div>
+            </div>
+            <div class="help__box__body p-4">
+                <h2 class="text-uppercase">business bank account <br> cashcack service</h2>
+                <p class="text-muted">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ad et dolor ipsa unde omnis repellendus cupiditate maiores ut quod, quia totam cumque doloribus fuga labore sint ratione placeat porro.
+                </p>
+            </div>
+            
+        
+        
+    </div>
+                </div>   
+                <div class="col-lg-4">
+                    <img src="./img/blog/blog-3.jpg" alt="" class="img-fluid help__img">
+                    <div class="help__box mx-5 ">
+                        <div class="d-flex help__box__header">
+                            <div class="d-flex help__box__header--l">
+                                <img src="./img/blog/blog-4.jpg" alt="" class="rounded-circle img-fluid mr-3">
+                                <h3>Blog Writer name</h3>
+                            </div>
+                            <div class=" help__box__header--r  ml-auto text-center  ">
+                                <a href="#"><i class="fa fa-share-alt-square text-secondary d-block"></i></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span class="dot "></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    </a>
+                                    <div class="dropdown-menu ">
+                                        <a href="#" class="dropdown-item">Share with others</a>
+                                        <a href="#" class="dropdown-item">share on social account</a>
+                                        <a href="#" class="dropdown-item">save as</a>
+                                    </div>
+                    
+                    
+                            </div>
+                        </div>
+                        <div class="help__box__body p-4">
+                            <h2 class="text-uppercase">business bank account <br> cashcack service</h2>
+                            <p class="text-muted">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ad et dolor ipsa unde omnis repellendus cupiditate maiores ut quod, quia totam cumque doloribus fuga labore sint ratione placeat porro.
+                            </p>
+                        </div>
+                        
+                       
+                       
+                    </div>
+                                </div>       
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="question" id="question">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+<h1 class="question__heading">Have Questions?</h1>
+                <!-- accordion -->
+                
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                        <div class="card-header" id="headingOne">
+                        
+                            <button class="btn btn-link btn-inline-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Collapsible Group Item #1
+                            <i class="fas fa-angle-down rotate-icon d-inline-block  "></i>
+
+                            
+
+                            </h2>
+                        </div>
+                    
+                        <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                        </div>
+                        <div class="card">
+                        <div class="card-header" id="headingTwo">
+                        
+                            <button class="btn btn-link btn-inline-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group Item #2
+                            <i class="fas fa-angle-down rotate-icon"></i>
+
+                            </button>
+                        
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                        </div>
+                        <div class="card">
+                        <div class="card-header" id="headingThree">
+                            
+                            <button class="btn btn-link btn-inline-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Collapsible Group Item #3
+                            <i class="fas fa-angle-down rotate-icon"></i>
+
+                            </button>
+                            
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                            
+                                <button class="btn btn-link btn-inline-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Collapsible Group Item #4
+                                <i class="fas fa-angle-down rotate-icon"></i>
+    
+                                </button>
+                            
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="question__img">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section class="contact" id="contact">
+    <div class="container">
+        <h1 class="mb-4 text-center main-heading text-uppercase">Business Bank Account To Start Traning</h1>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-3">
+                <div class="contact__box">
+                    <div class="contact__box_img">
+                        <img src="./img/clients/client-3.png" class=" w-75 d-block m-auto"  alt="">
+                    </div>
+                    
+                    <h2 class="text-white mt-3">&euro; 50 Cashback</h2>
+                    <button class="btn  py-2 m-3 text-dark text-uppercase"> Click For More Information</button>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3">
+                <div class="contact__box">
+                    <div class="contact__box_img">
+                        <img src="./img//clients/client-2.png" class=" w-75 d-block m-auto"  alt="">
+                    </div>
+                    
+                    <h2 class="text-white mt-3">&euro; 50 Cashback</h2>
+                    <button class="btn  py-2 m-3 text-dark text-uppercase"> Click For More Information</button>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3">
+                <div class="contact__box">
+                    <div class="contact__box_img">
+                        <img src="./img//clients/client-5.png" class=" w-75 d-block m-auto"  alt="">
+                    </div>
+                    
+                    <h2 class="text-white mt-3">&euro; 50 Cashback</h2>
+                    <button class="btn  py-2 m-3 text-dark text-uppercase"> Click For More Information</button>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3">
+                <div class="contact__box">
+                    <div class="contact__box_img">
+                        <img src="./img//clients/client-6.png" class=" w-75 d-block m-auto"  alt="">
+                    </div>
+                    
+                    <h2 class="text-white mt-3">&euro; 50 Cashback</h2>
+                    <button class="btn  py-2 m-3 text-dark text-uppercase"> Click For More Information</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 mb-3">
+                <h2>Company Formation</h2>
+                <ul class="list-unstyled">
+                    <li><a href="#">Company Formation Packages</a></li>
+                    <li><a href="">UK Limited Company Formation</a></li>
+                    <li><a href="">Public limited Company</a></li>
+                    <li><a href="">limited by Share Company</a></li>
+                    <li><a href="">limited by Grantee Company</a></li>
+                    <li><a href="">limited by Liablity</a></li>
+                    <li><a href=""> Flat Management Company</a></li>
+                </ul>
+               
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-3">
+                <h2>Accountancy and Legal</h2>
+                <ul class="list-unstyled">
+                    <li><a href="#">Accountancy Formation Packages</a></li>
+                    <li><a href="">Confirmation Company Formation</a></li>
+                    <li><a href="">Change of limited Company</a></li>
+                    <li><a href="">company Name Share Company</a></li>
+                    <li><a href="">company Tax Grantee Company</a></li>
+                    <li><a href="">company Dissolution Liablity</a></li>
+                    <li><a href=""> Dormate Management Company</a></li>
+                </ul>
+               
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-3">
+                <h2>Parteners and Affiliates</h2>
+                <ul class="list-unstyled">
+                    <li><a href="#">Afflite Program</a></li>
+                    <li><a href="">White label  Lorem Ipsum.</a></li>
+                    <li><a href="">Whoslate</a></li>
+                    <li><a href="">Business App</a></li>
+                    <li><a href="">Graduates</a></li>
+                    <li><a href="">company Registration</a></li>
+                    
+                </ul>
+               
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-3">
+                <h2> UNKNO1 Company </h2>
+                <ul class="list-unstyled">
+                    <li><a href="#">111:113 Midtan House , Victrian Road</a></li>
+                    <li><a href="">Romford , RM 2LX.</a></li>
+                    <li><a href="tel:+20123897340">Phone : +20 123 897 340</a></li>
+                    <li><a href="mailto:nfo@ukno1companyformation.com">Mail : info@ukno1companyformation.com</a></li>
+                    
+                    
+                </ul>
+               
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <h2>How it Works</h2>
+                <ul class="list-unstyled">
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="">Why Choose Us ?</a></li>
+                    <li><a href="">Review and Testimonials</a></li>
+                </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+        <h2>How it Works</h2>
+                <ul class="list-unstyled">
+                    <li><a href="#">FAQS</a></li>
+                    <li><a href="">setting up a business</a></li>
+                    <li><a href="">Register a business name</a></li>
+                    <li><a href="">Current Vancy</a></li>
+
+                </ul>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 d-flex align-items-center">
+            <img src="./img/footer-icons/ACCA.jpg" class="img-fluid footer-image ml-auto d-block" alt="">
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <h2>Follow us</h2>
+            <ul class="list-unstyled social--list d-flex">
+                <li><a href="http://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="http://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="http://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="http://www.youtube.com"><i class="fab fa-youtube"></i></a></li>
+
+            </ul>
+            <img src="./img/footer-icons/icons.jpg" alt="">
+        </div>
+        
+    </div>
+    </div>
+</footer>
+
+<footer class="footer-small">
+    <div class="container">
+        <div class="row text-white">
+            <div class="col-sm-6 text-center text-sm-left">
+                CopyRight@2020 UNKNOw1 Cmpany Formation . All Rights reserved
+            </div>
+            <div class="col-sm-6 text-center text-sm-right">
+                <ul class="list-unstyled d-flex">
+                    <li>Terms and Conditions </li>
+                    <li>Terms and Services</li>
+                    <li>Privacy and Policy</li>
+                    <li>Companies Handing Procedure</li>
+                </ul>
+        </div>
+    </div>
+</footer>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- popper -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <!-- boots-tap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

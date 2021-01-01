@@ -1,0 +1,848 @@
+@import "basic";
+/*................ snipper..................... */
+.spinner{
+    z-index: 100000000000000000000000;
+    position:fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: $color-primary-dark;
+    top:0;
+    &__scaling-squares{
+        &{
+            position: absolute;
+            top:50%;
+            left: -50%;
+            transform:translate(-50%, -50%) rotate(0deg) ;
+            -webkit-transform:translate(-50%, -50%) rotate(0deg) ;
+            -moz-transform:translate(-50%, -50%) rotate(0deg) ;
+            -ms-transform:translate(-50%, -50%) rotate(0deg) ;
+            -o-transform:translate(-50%, -50%) rotate(0deg) ;
+            height: 65px;
+            width: 65px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            animation: scaling-squares-animation 1250ms;
+            animation-iteration-count: infinite;
+            -webkit-animation: scaling-squares-animation 1250ms;
+}
+        & , & *{
+            box-sizing: border-box;
+        }
+        .square{
+            &{
+                height: calc(65px * 0.25 / 1.3);
+                width: calc(65px * 0.25 / 1.3);
+                margin-right: auto;
+                margin-left: auto;
+                border: calc(65px * 0.04 / 1.3) solid $color-secondary-light;
+                position: absolute;
+                animation-duration: 1250ms;
+                animation-iteration-count: infinite;
+            }
+            &:nth-child(1){
+                animation-name: scaling-squares-spinner-animation-child-1;
+            }
+            &:nth-child(2){
+                animation-name: scaling-squares-spinner-animation-child-2;
+            }
+            &:nth-child(3){
+                animation-name: scaling-squares-spinner-animation-child-3;
+            }
+            &:nth-child(4){
+                animation-name: scaling-squares-spinner-animation-child-4;
+            }
+        }
+
+        }
+            @keyframes scaling-squares-animation {
+
+                50% {
+                transform: rotate(90deg);
+                }
+            
+                100% {
+                transform: rotate(180deg);
+                }
+            }
+        
+            @keyframes scaling-squares-spinner-animation-child-1 {
+                50% {
+                transform: translate(150%,150%) scale(2,2);
+                }
+            }
+            
+            @keyframes scaling-squares-spinner-animation-child-2 {
+                50% {
+                transform: translate(-150%,150%) scale(2,2);
+                }
+            }
+            
+            @keyframes scaling-squares-spinner-animation-child-3 {
+                50% {
+                transform: translate(-150%,-150%) scale(2,2);
+                }
+            }
+            
+            @keyframes scaling-squares-spinner-animation-child-4 {
+                50% {
+                transform: translate(150%,-150%) scale(2,2);
+                }
+            }
+            
+}
+
+//........sections ...............
+section:not(:first-of-type){
+    padding: 5rem 0;
+}
+//.........main-heading..............
+.main-heading{
+    font-weight: bold;
+    font-size:2.7rem ;
+}
+//.....................................
+//........top navbar...............
+.top-nav{
+    text-align: center;
+    font-size: $default-font-size;
+    border-bottom: 1px solid $color-grey-light-2;
+    width: 100%;
+   
+    .row{
+       
+    }
+    i{
+        color:$color-secondary-light;
+        cursor: pointer;
+    }
+    span{
+        cursor: pointer;
+    }
+    &__box--center{
+        border-left:1px solid $color-grey-light-2 ;
+        border-right:1px solid $color-grey-light-2 ;
+        width: 33.33%;
+        
+        
+    }
+    @include respond(phone) { 
+        font-size:1.2rem;
+    }
+    
+}
+//........middle navbar...............
+.middle-nav{
+    font-size: $default-font-size;
+    
+    &__img{
+        width: 20rem;
+        height: 7rem;
+        margin: 1rem 0;
+        html[dir="rtl"] &{
+            left: 40%;
+            position: relative;
+           
+        }
+        
+    }
+    .btn{
+        background-color: $color-secondary-light;
+        color:#fff;
+        margin: 0 1rem;
+    }
+}
+//........navbar...............
+.navbar{
+    z-index: 4;
+    width: 100%;
+    
+    a{
+        color:$color-grey-light-2;
+        font-size: $default-font-size;
+        
+    }
+    
+    & a.nav-link{
+        &{
+    display: inline-block;
+    position: relative;
+    transition:0.5s ;
+    -webkit-transition:0.5s ;
+    -moz-transition:0.5s ;
+    -ms-transition:0.5s ;
+    -o-transition:0.5s ;
+}
+        
+
+&::after{
+    content: '';
+    position: absolute;
+    bottom:-1.4rem;
+    left: 0;
+    width: 0;
+    height: 3px;
+    z-index: 2;
+    background-color: $color-secondary-light;
+}
+        &:hover,
+        &:active,
+        &.active
+        {
+&::after{
+            
+            width: 100%;    
+            }
+        }
+       
+    }
+}
+//..........header...............
+.header{
+    &{
+        overflow: hidden;
+        background-image: linear-gradient(rgba($color-primary , 0.5), rgba($color-primary-dark , 0.5)), url("../img/blog/blog-3.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 65vh;
+        width: 100%;
+        font-size: $default-font-size;
+        position: relative;
+    }
+    select{
+        border-radius: 0 !important;
+        -webkit-border-radius: 0 !important;
+        -moz-border-radius: 0 !important;
+        -ms-border-radius: 0 !important;
+        -o-border-radius: 0 !important;
+        border: 0;
+        height: calc(4rem + 2px) !important;
+
+}
+.input-group-append{
+    cursor: pointer;
+}
+    &__icons{
+    position: absolute;
+    top:50%;
+    left: 96%;
+    padding-left: 1rem;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+
+html[dir="rtl"] &{
+    right: 96.5%;
+    left: 0;
+}
+    
+    @include respond(tab-port) { 
+        left: 95%;
+        html[dir="rtl"] &{
+            right: 95%;
+            left: 0;
+        }
+    }
+    @include respond(tab-land) { // width < 1200?
+        left: 94%;
+        html[dir="rtl"] &{
+            right: 94%;
+            left: 0;
+        }
+    }
+    
+    @include respond(phone) { // width < 900?
+        left: 91%;
+        html[dir="rtl"] &{
+            right: 92%;
+            left: 0;
+        }
+    }
+}
+    &__icons a{
+            color:#fff;
+            li{
+                width: 5rem;
+                height: 5rem;
+                text-align: center;
+                line-height: 5rem;
+                background-color: $color-secondary-light;
+                
+                margin-bottom: 0.5rem;
+        }
+    }
+    &__content{
+        width: 100%;
+        height: 65vh;
+    }
+    &__heading{
+        font-size: 3rem ;
+        margin: 0;
+    }
+    & h2{
+        font-size: 2rem;
+        margin: 0;
+        font-weight: bold;
+    }
+    .header__form{
+        width: 50%;
+        margin:2rem auto;
+        @include respond(tab-land) { // width < 1200?
+            width: 80%;
+        }
+        
+        @include respond(phone) { // width < 900?
+            width:90%;
+        }
+    }
+    &__input-group{
+       
+        & input.form-control{
+            outline: none;
+            border: 0;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+        }
+        & .input-group-text{
+            border: 0;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            
+}
+        & .input-group-append span{
+            background-color: $color-primary;
+        }
+        
+    }
+}
+//....about section .......
+.about{
+    font-size: $default-font-size;
+    position: relative;
+    width: 100%;
+    top:-4rem;
+    &__heading{
+        background-color: $color-primary-dark;
+        // width: 100%;
+        padding: 2rem;
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+    }
+    &__boxes{
+background-color: $color-primary;  
+    }
+    &__box{
+    background-color: $color-primary;  
+    padding: 1rem; 
+    &:not(:last-child){
+border-right: 2px solid  $color-secondary-light;
+html[dir="rtl"] &{
+    border-right: 2px solid  transparent;
+    border-left: 2px solid  $color-secondary-light;
+
+}
+@include respond(phone) { // width < 1200?
+    border-right: 2px solid  transparent;
+    border-bottom: 2px solid $color-secondary-light;
+    html[dir="rtl"] &{
+    border-left: 2px solid  transparent;
+    }
+}
+    }
+
+    }
+    &__box__icon{
+color:$color-secondary-light;
+border: 1px solid $color-secondary-light;
+width: 8rem;
+height: 8rem;
+text-align: center;
+padding: 1rem;
+
+    }
+    &__box__text{
+color:#ffff;
+margin-left: 2rem;
+html[dir="rtl"] &{
+    margin-left: 0;
+    margin-right: 2rem;
+    text-align: right;
+}
+a{
+color:#fff;
+text-decoration: underline;
+}
+    }
+}
+// services section
+.services{
+    font-size: $default-font-size ;
+    text-align: center;
+    &__main-text{
+        color:#777;
+        margin-bottom: 3rem;
+    }
+    
+    .col-services{
+        width: 18%;
+        margin-right: 2%;
+        margin-bottom: 3rem;
+        position: relative;
+        span.best-seller{
+            position: absolute;
+            top:0;
+            right: 0;
+            background-color: $color-primary;
+            color:#fff;
+            width: 6rem;
+            height: 5rem;
+            font-weight: bold;
+        }
+        &:last-of-type{
+            margin-right: 0%;
+            // width: 20%;
+            
+        }
+        
+         //.col-services 1
+        &:nth-of-type(1) .card{
+            @include respond(tab-port) { // width < 900?
+                background-color: #fff;
+                color:#666;
+            }
+        }
+
+        //.col-services 3
+        &:nth-of-type(3){
+            .card{
+                background-color: $color-secondary-light;
+                color:#fff;
+            }
+            @include respond(tab-port) { 
+            margin-left: 25% !important;
+            html[dir="rtl"] &{
+                margin-right: 25% !important;
+            }
+        }
+        @include respond(phone) { 
+            margin-left: 0 !important;
+            html[dir="rtl"] &{
+                margin-right: 0 !important;
+            }
+            
+        }
+        }
+         //.col-services 4
+        &:nth-of-type(4){
+            @include respond(tab-land) { 
+                margin-left: 16.6667%;
+                html[dir="rtl"] &{
+                    margin-right: 16.6667%;
+                    margin-left: 1%;
+                }
+                @include respond(tab-port ){
+                    html[dir="rtl"] &{
+                    margin-right: 0;
+                    margin-left: 0;
+                    }
+                }
+                @include respond(phone) { 
+                    margin-right: 0;
+                }
+            }
+            @include respond(tab-port) { 
+                margin-left: 0;
+            }
+        }
+
+
+        @include respond(tab-land) { // width < 1200?
+           
+            width: 31.33%;
+            &:last-of-type,
+            &:nth-of-type(3){
+                // width: 33.33%;
+                margin-right: 0%;
+            
+        }
+        }
+        @include respond(tab-port) { // width < 900?
+            width: 48%;
+            &:last-of-type{
+                // width: 50%;
+                margin-right: 0%;
+            }
+            &:nth-of-type(2),
+            &:nth-of-type(4){
+                // width: 50%;
+                margin-right: 0%;
+                
+            }
+            &:nth-of-type(3){
+                width: 48%;
+                margin-right: 2%;
+                
+            }
+            }
+        
+        @include respond(phone) { // width < 1200?
+            width: 100% !important;
+            margin:2rem 0 !important;
+            
+        }
+
+
+
+        .services__card{
+            .btn{
+                background-color: $color-secondary-light;
+                color:#fff;
+                font-size: 1.5rem;
+                padding: 0.5rem 2.5rem;
+                margin: 1rem;
+            }
+            ul li{
+                padding:1.5rem 0;
+                
+                &:not(:last-child){
+                    border-bottom:1px solid $color-grey-light-2;
+                    margin: 0;
+                    width: 100%;
+                    
+                }
+            }
+        }
+
+
+        
+    
+    }
+    .card{
+        padding: 2rem !important;
+        border: 0 !important;
+        box-shadow: 0 5px 7px rgba(0,0,0 , 0.1),
+                    0 -5px 7px rgba(0,0,0 , 0.1);
+        margin:0 2rem 0 0;
+        &:last-of-type{
+            margin:0;
+        }
+        
+    }
+    .card-head{
+        border-top:1px solid $color-grey-light-2;
+        border-bottom:1px solid $color-grey-light-2;
+    }
+    
+}
+.why-choose{
+    
+    font-size: $default-font-size;
+    @include respond(phone) { // width < 900?
+        width: 95%;
+        margin: auto;
+    }
+    .row{
+        box-shadow: 0 5px 15px rgba(0,0,0 , 0.3);
+    }
+    &__bg--prim{
+        background-color: $color-primary-dark;
+        color:#fff !important;
+    }
+    &__list{
+        width: 100% ;
+        display:block;
+        
+        
+        li{
+            cursor: pointer;
+            padding: 1.5rem;
+            font-weight: bold;
+            font-size: 1.8rem;
+            display: block;
+            margin: 0;
+    color: $color-primary;
+
+        }
+    }
+    &__center{
+        background-image: url(../img/team.jpg);
+        background-size: cover;;
+        width: 100% !important;
+        min-height: 25rem;
+        
+
+    }
+    &__last{
+        html[dir="rtl"] &{
+        text-align: right;
+        }
+    }
+}
+
+
+
+//............... help section......................
+.help{
+    font-size: $default-font-size;
+    &__content{
+        background-color: $color-secondary-light;
+        padding: 4rem 0 0.5rem;
+    }
+    
+    a:hover{
+text-decoration: none;
+    }
+    
+    // margin: 3rem 0;
+    &__img{
+        object-fit: cover;
+max-height: 25rem;
+width: 100%;
+// object-fit: cover;
+    }
+    &__box{
+        position: relative;
+        top:-3rem;
+        background-color: #fff;
+        &__header{
+            border: 1px solid #ccc;
+            
+            &--l{
+                width: 75%;
+                padding:1rem 2rem;
+                border-right: 1px solid #ccc;
+                html[dir="rtl"] &{
+                    border-right: 1px solid transparent;
+                    border-left: 1px solid #ccc;
+                }
+                
+img{
+    width: 32px;
+    height: 32px;
+
+}
+
+            }
+            &--r{
+                padding:1rem 1rem;
+                width: 35%;
+                .dot{
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    background: #777;
+                    border-radius: 50%;
+                    margin: 0;
+                }
+                .dropdown-toggle::after {
+                    border: 1px solid transparent !important;
+                 }
+                 .dropdown-item{
+                     font-size: 1.3rem;
+                 }
+            }
+        }
+        &__body{
+            border: 1px solid #ccc;
+            border-top:transparent;
+            
+                html[dir="rtl"] &{
+                text-align: right;
+                }
+           
+        }
+    }
+}
+
+
+//...............question section.............
+.question{
+font-size: $default-font-size;
+&__heading{
+    font-size: 3rem;
+    margin: 1rem 2rem 3rem;
+    color:#555;
+    position: relative;
+    &:before{
+        content: "";
+        position: absolute;
+        bottom:-0.5rem;
+        left: -0.5rem;
+        width: 12rem;
+        height: 3px;
+        background-color:rgb(214, 32, 32);
+        
+}
+
+}
+.accordion{
+   
+}
+.card{
+    margin: 1rem;
+    
+}
+
+.card-header{
+    background-color: #e9e6e6;
+    padding: 0.5rem !important;
+    border: 1px solid rgb(214, 213, 213);
+    
+}
+
+ button.text-left{
+    font-weight: bold !important;
+    color:#555;
+    font-size: 1.8rem;
+    width: 100%;
+    html[dir="rtl"] &{
+        text-align: right !important;
+    }
+    // font-size: 2rem;
+    &:hover{
+        color:#555;
+    }
+    i{
+        font-size: 2.2rem;
+        color:#999;
+        display: inline-block;
+        width: 100%;
+        margin-left: 17rem !important;
+        html[dir="rtl"] &{
+            margin-right: 17rem !important;
+            }
+        @include respond(tab-land) { 
+            margin-left:8rem !important;
+            html[dir="rtl"] &{
+                margin-right: 8rem !important;
+                }
+        }
+        @include respond(tab-port) { 
+            margin-left:30rem !important;
+            html[dir="rtl"] &{
+                margin-right:30rem !important;
+                
+                }
+        }
+        @include respond(phone) { 
+            margin-left: 25rem !important;
+            html[dir="rtl"] &{
+                margin-right: 25rem !important;
+                }
+        }
+    }
+    }
+
+    &__img{
+        background-image: url(../img/team.jpg);
+        background-size: cover;
+        width: 100%;
+        min-height: 40rem;
+    }
+}
+
+//...............contact section.............
+.contact{
+    font-size: $default-font-size;
+    text-align: center;
+    &__box{
+        background-color: $color-primary-light;
+        border: 3px solid $color-primary-light;
+        &_img{
+            background-color: #fff;
+            padding: 1rem;
+           
+            img{
+                height: 6rem;
+                
+                @include respond(tab-port) { // width < 900?
+                    width: 20% !important;
+                    margin: auto;
+                    
+                    
+                }
+            }
+        }
+        button{
+            width: 90%;
+            font-weight: bold;
+            font-size: 1.1rem;
+            background-color: #fff;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            @include respond(tab-land) { 
+                font-size: 1.3rem;
+            }
+}
+    }
+}
+//...............footer section.............
+.footer{
+font-size: $default-font-size;
+background-color:$color-primary ;
+color:#fff;
+padding: 8rem 0;
+    html[dir="rtl"] &{
+        text-align: right;
+    }
+    h2{
+        font-size: 2.3rem;
+    }
+    a{
+        color:#fff;
+    }
+    .footer-image{
+        width: 40%;
+        padding-left: 2rem;
+    }
+    .social--list{
+        li{
+            margin: 0.5rem;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            background-color:rgb(52, 95, 189);
+        }
+    }
+}
+//...............footer-small.............
+.footer-small{
+    font-size: 1.1rem;
+    padding: 2.5rem 0 ;
+background-color:$color-primary-dark ;
+ul li{
+    padding:0 0.5rem;
+    html[dir="rtl"] &:first-of-type{
+        border-right: 1px solid transparent;
+    }
+    html[dir="rtl"] &:last-of-type{
+        border-right: 1px solid #fff;
+    }
+    &:not(:last-of-type){
+        border-right: 1px solid #fff;
+    }
+}
+}
+

@@ -1,0 +1,142 @@
+//.................basics................
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone ..max
+600 - 900px:    Tablet portrait ..max
+900 - 1200px:   Tablet landscape ..max
+[1200 - 1800] is where our ..normal styles apply
+1800px + :      Big desktop ..min
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 575.98px) { @content };    //600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 767.98px) { @content };     //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 991.98px) { @content };    //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}
+//.....................vars..................................
+// COLORS
+$color-primary:#3f5a90;
+$color-primary-light: #1aafc9;
+$color-primary-dark: #364d7c;
+
+$color-secondary-light: rgb(12, 191, 160);;
+$color-secondary-dark: #35cfe4;
+
+// $color-tertiary-light: #2998ff;
+// $color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark-1: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+// $color-primary:#3f5a90d0;
+// FONT
+$default-font-size: 1.6rem;
+
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+//.................bg-video............
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .15;
+    overflow: hidden;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+.bg--prim {
+    background-color: $color-primary;
+    color:#fff;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+::selection {//important..............
+    background-color: $color-primary;
+    color: $color-white;
+}
+
+// //..................mixin..................
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
